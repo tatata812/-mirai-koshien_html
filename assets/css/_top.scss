@@ -190,13 +190,9 @@
       padding: 0 0 0 28px;
 
       &::before {
-        content: "";
-        position: absolute;
-        left: 0;
         top: 8px;
         width: 16px;
         height: 16px;
-        background: url('../img/top/how-marker.png') no-repeat center / contain;
       }
     }
 
@@ -231,7 +227,7 @@
     max-width: 600px;
   }
 
-  &__ {}
+
 
   &__ {}
 
@@ -254,11 +250,82 @@
 
 .top-project {
   background-color: #f2f9fb;
-  padding: 80px 16px;
+  padding: 100px 16px;
 
-  &__ {}
+  @include tab {
+    padding: 60px 16px;
+  }
 
-  &__ {}
+  &__list {
+    max-width: 720px;
+    margin: 0 auto 40px;
+
+    @include tab {
+      max-width: 520px;
+    }
+
+    @include sp {
+      margin: 0 0 24px;
+      padding: 0 24px;
+    }
+  }
+
+  &__list-item {
+    position: relative;
+    font-size: 24px;
+    padding: 0 0 0 60px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 11px;
+      width: 24px;
+      height: 24px;
+      background: url('../img/top/project-marker.png') no-repeat center / contain;
+    }
+
+    @include tab {
+      padding: 0 0 0 40px;
+    }
+
+    @include sp {
+      font-size: 16px;
+      padding: 0 0 0 24px;
+
+      &::before {
+        top: 8px;
+        width: 16px;
+        height: 16px;
+      }
+    }
+  }
+
+  &__img {
+    max-width: 880px;
+    margin: 0 auto 60px;
+
+    @include tab {
+      max-width: 580px;
+      margin: 0 auto 40px;
+
+    }
+
+    @include sp {
+      max-width: 380px;
+    }
+  }
+
+  &__btn-wrap {
+    max-width: 880px;
+    margin: 0 auto;
+    text-align: right;
+  }
+
+  &__btn {
+    display: inline-block;
+    max-width: 560px;
+  }
 
   &__ {}
 
@@ -294,18 +361,83 @@
 }
 
 /* =================================
-
+『やってみたい』を やってみるための日程
  ================================= */
 
-.aaa {
+.top-schedule {
+  padding: 120px 16px;
 
-  &__ {}
+  &__content {
+    max-width: 760px;
+    margin: 0 auto;
+  }
 
-  &__ {}
+  &__subttl {
+    max-width: 640px;
+    margin: 0 0 12px;
 
-  &__ {}
+  }
 
-  &__ {}
+  &__table-wrap {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  &__table {
+    width: 100%;
+    border-collapse: collapse;
+
+    @include tab {
+      min-width: 540px;
+    }
+  }
+
+  &__row {
+    background: #e6f6fa;
+
+    &:nth-child(even) {
+      background: #fbffed;
+    }
+
+    &--cream {
+      background: #fbffed;
+    }
+  }
+
+  &__term,
+  &__desc {
+    padding: 24px;
+    line-height: 1.65;
+    letter-spacing: 0.04em;
+    color: #4a4a4a;
+    vertical-align: middle;
+
+    @include tab {
+
+      padding: 12px;
+    }
+  }
+
+  &__term {
+    width: 40%;
+    font-weight: 400;
+    text-align: left;
+
+
+  }
+
+  &__desc {
+    width: 60%;
+    border-left: 2px solid #cfd8d8;
+
+    @include tab {
+      padding-top: 0;
+    }
+  }
+
+  &__note {
+    color: #ff5a1f;
+  }
 
   &__ {}
 
