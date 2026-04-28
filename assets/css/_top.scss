@@ -1,11 +1,81 @@
 @use "config"as *;
 
 /* トップページスタイルシート */
-/* =================================
 
+/* =================================
+共通パーツ
  ================================= */
 
-.aaa {
+.page-top {
+
+  background:
+    url('../img/top/how-bg-left.png') left 0 top 0 / 180px auto no-repeat,
+    url('../img/top/how-bg-right.png') right 0 top 0 / 180px auto no-repeat;
+
+  @include tab {
+    background:
+      url('../img/top/how-bg-left.png') left 0 top 0 / 100px auto no-repeat,
+      url('../img/top/how-bg-right.png') right 0 top 0 / 100px auto no-repeat;
+  }
+
+  @include sp {
+    padding: 0 0 60px;
+
+    background:
+      url('../img/top/how-bg-left.png') left 0 top 0 / 50px auto no-repeat,
+      url('../img/top/how-bg-right.png') right 0 top 0 / 50px auto no-repeat;
+  }
+
+  &__ttl {
+    max-width: 880px;
+    margin: 0 auto 60px;
+
+    @include tab {
+      max-width: 600px;
+      margin: 0 auto 24px;
+    }
+  }
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+
+}
+
+/* =================================
+メインビジュアル
+ ================================= */
+
+.main-visual {
 
   &__ {}
 
@@ -45,10 +115,146 @@
 }
 
 /* =================================
-
+たとえば こんなこと、やってみませんか
  ================================= */
 
-.aaa {
+.top-how {
+  padding: 0 16px 120px;
+
+  @include tab {
+    padding: 0 16px 60px;
+  }
+
+  &__main-img {
+    max-width: 800px;
+    margin: 0 auto 100px;
+
+    @include tab {
+      max-width: 560px;
+      margin: 0 auto 40px;
+    }
+
+    @include sp {
+      max-width: 360px;
+    }
+  }
+
+  &__content {
+    max-width: 780px;
+    margin: 0 auto 80px;
+    display: flex;
+
+    @include tab {
+      flex-direction: column;
+      align-items: center;
+      gap: 40px;
+      margin: 0 auto 40px;
+
+    }
+
+  }
+
+  &__text-wrap {
+    width: 430px;
+
+    @include sp {
+      width: auto;
+    }
+  }
+
+  &__list {
+    margin: 0 0 24px;
+
+    @include sp {
+      margin: 0 0 12px;
+    }
+  }
+
+  &__list-item {
+    position: relative;
+    font-size: 24px;
+    padding: 0 0 0 40px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 11px;
+      width: 24px;
+      height: 24px;
+      background: url('../img/top/how-marker.png') no-repeat center / contain;
+    }
+
+    @include sp {
+      font-size: 16px;
+      padding: 0 0 0 28px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 8px;
+        width: 16px;
+        height: 16px;
+        background: url('../img/top/how-marker.png') no-repeat center / contain;
+      }
+    }
+
+
+  }
+
+  &__bottom-text {
+    color: $main;
+  }
+
+  &__content-img {
+    flex: 1;
+
+    @include tab {
+      flex: auto;
+      max-width: 400px;
+    }
+
+    @include sp {
+      max-width: 280px;
+    }
+  }
+
+  &__btn-wrap {
+    max-width: 880px;
+    margin: 0 auto;
+    text-align: right;
+  }
+
+  &__btn {
+    display: inline-block;
+    max-width: 600px;
+  }
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+
+}
+
+/* =================================
+採択された企画を 実行してみよう
+ ================================= */
+
+.top-project {
+  background-color: #f2f9fb;
+  padding: 80px 16px;
 
   &__ {}
 
