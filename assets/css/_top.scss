@@ -9,21 +9,20 @@
 .page-top {
 
   background:
-    url('../img/top/how-bg-left.png') left 0 top 0 / 180px auto no-repeat,
-    url('../img/top/how-bg-right.png') right 0 top 0 / 180px auto no-repeat;
+    url('../img/top/how-bg-left.png') left 0 top 0 / 180px auto repeat-y,
+    url('../img/top/how-bg-right.png') right 0 top 0 / 180px auto repeat-y;
 
   @include tab {
     background:
-      url('../img/top/how-bg-left.png') left 0 top 0 / 100px auto no-repeat,
-      url('../img/top/how-bg-right.png') right 0 top 0 / 100px auto no-repeat;
+      url('../img/top/how-bg-left.png') left 0 top 0 / 100px auto repeat-y,
+      url('../img/top/how-bg-right.png') right 0 top 0 / 100px auto repeat-y;
   }
 
   @include sp {
     padding: 0 0 60px;
-
     background:
-      url('../img/top/how-bg-left.png') left 0 top 0 / 50px auto no-repeat,
-      url('../img/top/how-bg-right.png') right 0 top 0 / 50px auto no-repeat;
+      url('../img/top/how-bg-left.png') left 0 top 0 / 50px auto repeat-y,
+      url('../img/top/how-bg-right.png') right 0 top 0 / 50px auto repeat-y;
   }
 
   &__ttl {
@@ -365,7 +364,16 @@
  ================================= */
 
 .top-schedule {
-  padding: 120px 16px;
+  padding: 120px 0 0;
+
+  @include tab{
+  padding: 40px 0 0;
+  }
+
+  &__inner {
+    padding: 0 16px;
+
+  }
 
   &__content {
     max-width: 760px;
@@ -375,6 +383,14 @@
   &__subttl {
     max-width: 640px;
     margin: 0 0 12px;
+
+    @include tab{
+    max-width: 440px;
+    }
+
+    @include sp {
+      max-width: 320px;
+    }
 
   }
 
@@ -439,9 +455,41 @@
     color: #ff5a1f;
   }
 
-  &__ {}
+  &__notes {
+    margin-top: 40px;
+  }
 
-  &__ {}
+  &__note-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  &__note-item+&__note-item {
+    margin-top: 16px;
+  }
+
+  &__note-label {
+    color: #ff5a1f;
+    flex-shrink: 0;
+
+  }
+
+  &__note-text {
+    margin: 0;
+    line-height: 1.8;
+  }
+
+
+  &__img {
+    max-width: 880px;
+    margin: 0 auto -2px;
+  }
+
+  &__btn-wrap {
+    background-color: #f13744;
+    padding: 40px;
+  }
 
   &__ {}
 

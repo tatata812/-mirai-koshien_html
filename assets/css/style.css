@@ -5,17 +5,17 @@
 共通パーツ
  ================================= */
 .page-top {
-  background: url("../img/top/how-bg-left.png") left 0 top 0/180px auto no-repeat, url("../img/top/how-bg-right.png") right 0 top 0/180px auto no-repeat;
+  background: url("../img/top/how-bg-left.png") left 0 top 0/180px auto repeat-y, url("../img/top/how-bg-right.png") right 0 top 0/180px auto repeat-y;
 }
 @media (max-width: 820px) {
   .page-top {
-    background: url("../img/top/how-bg-left.png") left 0 top 0/100px auto no-repeat, url("../img/top/how-bg-right.png") right 0 top 0/100px auto no-repeat;
+    background: url("../img/top/how-bg-left.png") left 0 top 0/100px auto repeat-y, url("../img/top/how-bg-right.png") right 0 top 0/100px auto repeat-y;
   }
 }
 @media (max-width: 600px) {
   .page-top {
     padding: 0 0 60px;
-    background: url("../img/top/how-bg-left.png") left 0 top 0/50px auto no-repeat, url("../img/top/how-bg-right.png") right 0 top 0/50px auto no-repeat;
+    background: url("../img/top/how-bg-left.png") left 0 top 0/50px auto repeat-y, url("../img/top/how-bg-right.png") right 0 top 0/50px auto repeat-y;
   }
 }
 .page-top__ttl {
@@ -222,7 +222,15 @@
 『やってみたい』を やってみるための日程
  ================================= */
 .top-schedule {
-  padding: 120px 16px;
+  padding: 120px 0 0;
+}
+@media (max-width: 820px) {
+  .top-schedule {
+    padding: 40px 0 0;
+  }
+}
+.top-schedule__inner {
+  padding: 0 16px;
 }
 .top-schedule__content {
   max-width: 760px;
@@ -231,6 +239,16 @@
 .top-schedule__subttl {
   max-width: 640px;
   margin: 0 0 12px;
+}
+@media (max-width: 820px) {
+  .top-schedule__subttl {
+    max-width: 440px;
+  }
+}
+@media (max-width: 600px) {
+  .top-schedule__subttl {
+    max-width: 320px;
+  }
 }
 .top-schedule__table-wrap {
   overflow-x: auto;
@@ -282,6 +300,33 @@
 }
 .top-schedule__note {
   color: #ff5a1f;
+}
+.top-schedule__notes {
+  margin-top: 40px;
+}
+.top-schedule__note-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+.top-schedule__note-item + .top-schedule__note-item {
+  margin-top: 16px;
+}
+.top-schedule__note-label {
+  color: #ff5a1f;
+  flex-shrink: 0;
+}
+.top-schedule__note-text {
+  margin: 0;
+  line-height: 1.8;
+}
+.top-schedule__img {
+  max-width: 880px;
+  margin: 0 auto -2px;
+}
+.top-schedule__btn-wrap {
+  background-color: #f13744;
+  padding: 40px;
 }
 /* =================================
 
