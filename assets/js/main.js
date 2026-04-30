@@ -4,7 +4,7 @@ $(function () {
   ヘッダー
    ================================= */
   $(function () {
-    const $btn = $('.site-header__menu-btn');
+    const $btn = $('.header-menu-js');
     const $menu = $('.sp-menu');
     const $overlay = $('.sp-menu__overlay');
     const $body = $('body');
