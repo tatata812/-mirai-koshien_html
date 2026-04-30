@@ -32,6 +32,11 @@ $(function () {
       }
     });
 
+    // メニュー内の閉じるボタンで閉じる
+    $('.sp-menu-js').on('click', function () {
+      closeMenu();
+    });
+
     // オーバーレイで閉じる
     $overlay.on('click', function () {
       closeMenu();
@@ -50,52 +55,7 @@ $(function () {
     });
   });
 
-  /* =================================
-  ページ内リンク　ヘッダーの高さ考慮
- ================================= */
-  var $header = $('.header');
 
-  function getHeaderH() {
-    if (!$header.length) return 0;
-    return $header.outerHeight() || 0;
-  }
-
-  function scrollToHash(hash, speed) {
-    if (!hash || hash === '#') return;
-
-    var $target = $(hash);
-    if (!$target.length) return;
-
-    var targetTop = $target.offset().top - getHeaderH();
-
-    $('html, body').stop().animate({
-        scrollTop: targetTop
-      },
-      typeof speed === 'number' ? speed : 400
-    );
-  }
-
-  $(document).on('click', 'a[href^="#"]', function (e) {
-    var href = $(this).attr('href');
-    if (!href || href === '#') return;
-    if (!$(href).length) return;
-
-    e.preventDefault();
-
-    if (history.pushState) {
-      history.pushState(null, null, href);
-    } else {
-      location.hash = href;
-    }
-
-    scrollToHash(href, 400);
-  });
-
-  $(window).on('load', function () {
-    if (location.hash) {
-      scrollToHash(location.hash, 0);
-    }
-  });
 
 
   /* =================================
@@ -112,6 +72,73 @@ $(function () {
       }
     });
   });
+
+  /* =================================
+  トップニュース
+ ================================= */
+  $(function () {
+    $('.news-card-js').slick({
+      slidesToShow: 4,
+      slidesToScroll: 1,
+      arrows: true,
+      dots: false,
+      infinite: true,
+      autoplay: true,
+      speed: 500,
+      responsive: [{
+          breakpoint: 1200,
+          settings: {
+            slidesToShow: 3,
+            arrows: false,
+            dots: true,
+
+          }
+        },
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 1,
+            adaptiveHeight: true,
+            centerMode: true,
+            centerPadding: "15%",
+            dots: true,
+            arrows: false,
+
+          }
+        }
+      ]
+    });
+  });
+
+
+
+  /* =================================
+  href="#" のページトップ戻り防止
+  ================================= */
+// リロード前のスクロール位置を保存
+
+$(window).on('beforeunload', function () {
+
+  sessionStorage.setItem('scrollTop', $(window).scrollTop());
+
+});
+
+// リロード後に元の位置へ戻す
+
+$(window).on('load', function () {
+
+  const scrollTop = sessionStorage.getItem('scrollTop');
+
+  if (scrollTop !== null) {
+
+    $(window).scrollTop(Number(scrollTop));
+
+    sessionStorage.removeItem('scrollTop');
+
+  }
+
+});
+
 
 
 })

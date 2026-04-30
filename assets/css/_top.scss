@@ -19,7 +19,6 @@
   }
 
   @include sp {
-    padding: 0 0 60px;
     background:
       url('../img/top/how-bg-left.png') left 0 top 0 / 50px auto repeat-y,
       url('../img/top/how-bg-right.png') right 0 top 0 / 50px auto repeat-y;
@@ -75,12 +74,43 @@
  ================================= */
 
 .main-visual {
+  background-color: #fff;
 
-  &__ {}
+  &__text-wrap {
+    background-color: #8cc63f;
+    padding: 0 16px;
+    margin: 12px 0 0;
 
-  &__ {}
+    @include tab{
+    margin: 0 0 0;
+    }
+  }
 
-  &__ {}
+  &__text {
+    max-width: 980px;
+    margin: 0 auto;
+    color: #fff;
+    font-size: 28px;
+    font-weight: 500;
+
+    @include tab{
+    font-size: 20px;
+    }
+
+    @include sp{
+    font-size: 16px;
+    }
+  }
+
+  &__img {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 16px;
+
+    @include sp{
+    padding: 24px 16px;
+    }
+  }
 
   &__ {}
 
@@ -121,7 +151,7 @@
   padding: 0 16px 120px;
 
   @include tab {
-    padding: 0 16px 60px;
+    padding: 0 16px 40px;
   }
 
   &__main-img {
@@ -252,7 +282,7 @@
   padding: 100px 16px;
 
   @include tab {
-    padding: 60px 16px;
+    padding: 40px 16px;
   }
 
   &__list {
@@ -366,8 +396,8 @@
 .top-schedule {
   padding: 120px 0 0;
 
-  @include tab{
-  padding: 40px 0 0;
+  @include tab {
+    padding: 40px 0 0;
   }
 
   &__inner {
@@ -384,8 +414,8 @@
     max-width: 640px;
     margin: 0 0 12px;
 
-    @include tab{
-    max-width: 440px;
+    @include tab {
+      max-width: 440px;
     }
 
     @include sp {
@@ -491,6 +521,85 @@
     padding: 40px;
   }
 
+  &__btn {
+    display: block;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+
+}
+
+/* =================================
+お知らせ
+ ================================= */
+
+.top-news {
+
+  padding: 100px 0;
+
+  @include tab {
+    padding: 40px 0;
+  }
+
+  &__ttl {
+    padding: 0 16px;
+  }
+
+  &__content {
+    margin: 40px 0 100px;
+
+    @include tab {
+      margin: 40px 0 60px;
+    }
+  }
+
+  &__btn-wrap {
+    max-width: 880px;
+    margin: 0 auto;
+    text-align: right;
+    padding: 0 16px;
+  }
+
+  &__btn {
+    display: inline-block;
+    max-width: 280px;
+
+    @include sp {
+      max-width: 200px;
+    }
+  }
+
+
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
   &__ {}
 
   &__ {}
@@ -517,53 +626,101 @@
 }
 
 /* =================================
-
+サポーター
  ================================= */
 
-.aaa {
+.top-supporter {
 
-  &__ {}
+  background-color: #f2f9fb;
+  padding: 100px 16px;
 
-  &__ {}
+  @include tab {
+    padding: 40px 16px 12px;
+  }
 
-  &__ {}
+  &__text {
+    max-width: 780px;
+    margin: 0 auto 60px;
 
-  &__ {}
+    @include tab{
+    margin: 0 auto 40px;
+    }
+  }
 
-  &__ {}
+  &__content {
+    max-width: 780px;
+    margin: 0 auto;
+  }
 
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
+  &__row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 0 0 24px;
 
 
-}
 
-/* =================================
+    @include tab {
 
- ================================= */
+      gap: 0;
+      margin: 0 0 24px;
+    }
 
-.aaa {
+    &--margin {
+      margin: 0 0 48px;
+
+      @include tab {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+        margin: 0 0 24px;
+      }
+    }
+  }
+
+  &__label {
+    font-size: 20px;
+
+    @include tab {
+      font-size: 16px;
+    }
+
+  }
+
+  &__name {
+    font-size: 20px;
+    color: #2f8f4e;
+
+    @include tab {
+      font-size: 16px;
+    }
+  }
+
+  &__line {
+    flex: 1;
+    height: 1px;
+    background: #2f8f4e;
+
+    @include tab {
+      width: 100%;
+    }
+  }
+
+  &__btn01 {
+    display: block;
+    max-width: 480px;
+    margin: 0 0 48px auto;
+  }
+
+  &__btn {
+    display: block;
+    max-width: 320px;
+    margin: 0 0 0 auto;
+
+    @include sp{
+    max-width: 220px;
+    }
+  }
 
   &__ {}
 
