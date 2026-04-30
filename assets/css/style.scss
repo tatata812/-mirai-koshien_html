@@ -155,7 +155,6 @@ header
     @include sp {
       padding: 0 140px 0 0;
     }
-
   }
 
   &__menu-wrap {
@@ -214,7 +213,6 @@ header
       font-weight: 600;
     }
   }
-
 }
 
 /* =========================
@@ -234,7 +232,6 @@ header
   @include tab {
     width: min(320px, 86vw);
   }
-
 
   &.is-open {
     transform: translateX(0);
@@ -268,14 +265,12 @@ header
       top: 6px;
       right: 6px;
     }
-
   }
 
   &__list {
     display: flex;
     flex-direction: column;
     gap: 0; // 区切り線で見せる
-
   }
 
   &__item {
@@ -298,7 +293,6 @@ header
     }
 
     // 矢印
-
     &::after {
       content: "";
       width: 8px;
@@ -316,7 +310,6 @@ header
     &:active {
       background: #f7f7f7;
     }
-
   }
 }
 
@@ -344,9 +337,6 @@ header
 body.is-sp-menu-open {
   overflow: hidden;
 }
-
-
-
 
 /* =================================
 footer
@@ -383,8 +373,8 @@ footer
 
   &__top-right {
 
-    @include tab{
-          max-width: 540px;
+    @include tab {
+      max-width: 540px;
       margin: 0 auto;
     }
 
@@ -398,9 +388,9 @@ footer
     display: block;
     margin: 0 0 24px;
 
-    @include tab{
-    max-width: 420px;
-    margin: 0 auto 24px;
+    @include tab {
+      max-width: 420px;
+      margin: 0 auto 24px;
     }
   }
 
@@ -429,7 +419,6 @@ footer
       flex-direction: column;
       gap: 12px;
       padding: 12px 16px;
-
     }
   }
 
@@ -447,8 +436,8 @@ footer
     display: block;
     max-width: 160px;
 
-    @include sp{
-    max-width: 100px;
+    @include sp {
+      max-width: 100px;
     }
   }
 
@@ -457,8 +446,8 @@ footer
     max-width: 600px;
     margin: 0 auto;
 
-    @include sp{
-    padding: 12px 16px 0;
+    @include sp {
+      padding: 12px 16px 0;
     }
   }
 
@@ -477,22 +466,6 @@ footer
     padding: 8px 16px;
 
   }
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-
 }
 
 
@@ -892,7 +865,6 @@ footer
     }
   }
 }
-
 
 
 /* =========================

@@ -115,29 +115,21 @@ $(function () {
   /* =================================
   href="#" のページトップ戻り防止
   ================================= */
-// リロード前のスクロール位置を保存
+  // リロード前のスクロール位置を保存
 
-$(window).on('beforeunload', function () {
+  $(window).on('beforeunload', function () {
+    sessionStorage.setItem('scrollTop', $(window).scrollTop());
+  });
 
-  sessionStorage.setItem('scrollTop', $(window).scrollTop());
+  // リロード後に元の位置へ戻す
 
-});
-
-// リロード後に元の位置へ戻す
-
-$(window).on('load', function () {
-
-  const scrollTop = sessionStorage.getItem('scrollTop');
-
-  if (scrollTop !== null) {
-
-    $(window).scrollTop(Number(scrollTop));
-
-    sessionStorage.removeItem('scrollTop');
-
-  }
-
-});
+  $(window).on('load', function () {
+    const scrollTop = sessionStorage.getItem('scrollTop');
+    if (scrollTop !== null) {
+      $(window).scrollTop(Number(scrollTop));
+      sessionStorage.removeItem('scrollTop');
+    }
+  });
 
 
 
