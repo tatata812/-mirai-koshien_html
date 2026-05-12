@@ -608,7 +608,7 @@ footer
    editor style
 ========================= */
 
-.editor-style {
+.page-style {
 
   &__block {
     margin: 0 0 40px;
@@ -645,21 +645,34 @@ footer
   }
 
   h2 {
-    font-size: 22px;
-    margin: 56px 0 16px;
-    padding-bottom: 8px;
-    border-bottom: 2px solid $main;
+    position: relative;
+    margin: 0 0 24px;
+    padding: 8px 0 8px 24px;
+    color: #333;
+    font-weight: 500;
     line-height: 1.4;
+    font-size: 20px;
 
-    @include tab {
-      font-size: 18px;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      width: 10px;
+      height: 10px;
+      background: $main;
     }
+
+
   }
 
   h3 {
     font-size: 18px;
     margin: 40px 0 12px;
     line-height: 1.4;
+    font-weight: 400;
+
 
     @include tab {
       font-size: 16px;
@@ -705,14 +718,16 @@ footer
     padding: 0;
   }
 
-  li {
-    margin-bottom: 8px;
+  ul li {
+    list-style: disc;
   }
 
-  ul ul,
-  ol ol {
-    margin-top: 8px;
-    margin-bottom: 0;
+  ol li {
+    list-style: decimal;
+  }
+
+  li {
+    margin-bottom: 8px;
   }
 
   /* --------------------
@@ -947,14 +962,14 @@ a[class*="btn"] {
 
   &__img {
     overflow: hidden;
-     aspect-ratio: 4 / 3;
-     border-radius: 12px;
+    aspect-ratio: 4 / 3;
+    border-radius: 12px;
 
     img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      
+
     }
   }
 

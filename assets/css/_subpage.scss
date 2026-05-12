@@ -9,6 +9,16 @@
 
 .subpage {
 
+  &__content {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 80px 16px;
+
+    @include tab {
+      padding: 40px 16px;
+    }
+  }
+
   &__ttl-bg {
     background-color: $bg;
     padding: 40px 0;
@@ -92,15 +102,6 @@
 
 .page-guidelines {
 
-  &__content {
-    max-width: 980px;
-    margin: 0 auto;
-    padding: 80px 16px;
-
-    @include tab {
-      padding: 40px 16px;
-    }
-  }
 
   &__schedule {
     margin: 0 0 80px;
@@ -200,16 +201,6 @@
  ================================= */
 
 .page-contact {
-  &__content {
-    max-width: 980px;
-    margin: 0 auto;
-    padding: 80px 16px;
-
-    @include tab {
-      padding: 40px 16px;
-    }
-  }
-
 
   &__section {
     margin: 0 0 72px;
@@ -238,8 +229,8 @@
   &__guide-text {
     margin: 0 0 60px;
 
-    @include tab{
-    margin: 0 0 40px;
+    @include tab {
+      margin: 0 0 40px;
     }
 
     a {
@@ -419,25 +410,54 @@
 
 .page-news {
 
-    &__content {
-    max-width: 1080px;
-    margin: 0 auto;
-    padding: 80px 16px;
-
-    @include tab {
-      padding: 40px 16px;
-    }
-  }
-
   &__card-wrap {
     margin: 0 0 80px;
 
-    @include tab{
-    margin: 0 0 40px;
+    @include tab {
+      margin: 0 0 40px;
     }
   }
 
-  &__ {}
+
+  &__ttl-wrap {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 0 16px;
+  }
+
+  &__ttl {
+    position: relative;
+    margin: 0 0 16px;
+    font-weight: 500;
+    font-size: 28px;
+    
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -8px;
+      width: 80px;
+      height: 3px;
+      background: $main;
+    }
+    
+    @include sp {
+      line-height: 1.4;
+    font-size: 20px;
+    }
+  }
+
+  &__time {
+    display: block;
+    color: #999;
+    text-align: right;
+    font-size: 12px;
+    padding: 0 8px;
+
+  }
+
+
+  &__single-content {}
 
   &__ {}
 
