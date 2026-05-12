@@ -652,6 +652,11 @@
 .page-guidelines__list li {
   list-style: disc;
 }
+.page-guidelines__btn {
+  display: block;
+  max-width: 500px;
+  margin: 0 auto;
+}
 
 /* =================================
 お問い合わせ
