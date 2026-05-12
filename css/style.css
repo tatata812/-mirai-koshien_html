@@ -510,15 +510,366 @@
 /* =================================
 下層ページ共通
  ================================= */
+.subpage__ttl-bg {
+  background-color: #f2f9fb;
+  padding: 40px 0;
+}
+@media (max-width: 820px) {
+  .subpage__ttl-bg {
+    padding: 12px 0;
+  }
+}
+.subpage__ttl-inner {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+.subpage__en {
+  color: #c8c8c8;
+  font-weight: 500;
+  line-height: 1;
+  font-size: 22px;
+}
+.subpage__en span {
+  color: #47c45a;
+}
+@media (max-width: 820px) {
+  .subpage__en {
+    font-size: 15px;
+  }
+}
+.subpage__ttl {
+  position: relative;
+  display: inline-block;
+  color: #47c45a;
+  font-weight: 500;
+  line-height: 1.2;
+  font-size: 34px;
+  margin: 8px 0 0;
+  padding: 8px 0 0;
+}
+@media (max-width: 820px) {
+  .subpage__ttl {
+    font-size: 22px;
+    margin: 4px 0 0;
+    padding: 4px 0 0;
+  }
+}
+.subpage__ttl::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  max-width: 320px;
+  height: 1px;
+  background: #47c45a;
+}
 /* =================================
-
+募集要項
  ================================= */
+.page-guidelines__content {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 80px 16px;
+}
+@media (max-width: 820px) {
+  .page-guidelines__content {
+    padding: 40px 16px;
+  }
+}
+.page-guidelines__schedule {
+  margin: 0 0 80px;
+}
+.page-guidelines__schedule span {
+  color: #f08c3a;
+  font-size: 12px;
+  vertical-align: super;
+}
+@media (max-width: 820px) {
+  .page-guidelines__schedule {
+    margin: 0 0 60px;
+  }
+}
+.page-guidelines__row {
+  display: flex;
+  align-items: flex-start;
+}
+.page-guidelines__row dt {
+  flex-shrink: 0;
+}
+.page-guidelines__row dd {
+  flex: 1;
+  margin: 0;
+}
+.page-guidelines__row span {
+  vertical-align: super;
+  font-size: 0.7em;
+  color: #f08c3a;
+}
+.page-guidelines__note {
+  margin: 20px 0 0;
+}
+.page-guidelines__note p {
+  color: #f08c3a;
+  font-size: 12px;
+}
+.page-guidelines__note-box {
+  border: 1px solid #f08c3a;
+  padding: 4px 8px;
+  color: #f08c3a;
+  line-height: 1.5;
+  display: inline-block;
+}
+.page-guidelines__block {
+  margin: 0 0 60px;
+}
+@media (max-width: 600px) {
+  .page-guidelines__block {
+    margin: 0 0 40px;
+  }
+}
+.page-guidelines__heading {
+  color: #47c45a;
+  font-weight: 500;
+  margin: 0 0 4px;
+}
+.page-guidelines__sub-heading {
+  color: #f08c3a;
+  font-weight: 500;
+  line-height: 1.5;
+}
+.page-guidelines__example {
+  margin: 24px 0 0;
+}
+.page-guidelines__example h4 {
+  color: #f08c3a;
+  font-weight: 500;
+}
+.page-guidelines__list {
+  padding-left: 1.5em;
+}
+.page-guidelines__list li {
+  list-style: disc;
+}
+
 /* =================================
-
+お問い合わせ
  ================================= */
+.page-contact__content {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 80px 16px;
+}
+@media (max-width: 820px) {
+  .page-contact__content {
+    padding: 40px 16px;
+  }
+}
+.page-contact__section {
+  margin: 0 0 72px;
+}
+@media (max-width: 820px) {
+  .page-contact__section {
+    margin: 0 0 40px;
+  }
+}
+.page-contact__section-title {
+  position: relative;
+  margin: 0 0 16px;
+  padding-left: 12px;
+}
+.page-contact__section-title::before {
+  content: "";
+  position: absolute;
+  top: 0.45em;
+  left: 0;
+  width: 4px;
+  height: 1em;
+  background: #39c45a;
+}
+.page-contact__guide-text {
+  margin: 0 0 60px;
+}
+@media (max-width: 820px) {
+  .page-contact__guide-text {
+    margin: 0 0 40px;
+  }
+}
+.page-contact__guide-text a {
+  color: #39c45a;
+  text-decoration: underline;
+}
+.page-contact__list {
+  margin: 0;
+}
+.page-contact__row {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 40px;
+  padding: 12px 0;
+  border-top: 1px solid #e5e5e5;
+}
+.page-contact__row:last-child {
+  border-bottom: 1px solid #e5e5e5;
+}
+@media (max-width: 820px) {
+  .page-contact__row {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+}
+.page-contact__row dt {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin: 0;
+}
+@media (max-width: 820px) {
+  .page-contact__row dt {
+    justify-content: flex-start;
+  }
+}
+.page-contact__row dd {
+  margin: 0;
+}
+.page-contact__row input[type=text],
+.page-contact__row input[type=email],
+.page-contact__row input[type=tel],
+.page-contact__row input[type=file] {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid #ddd;
+  background: #fff;
+}
+@media (max-width: 820px) {
+  .page-contact__row input[type=text],
+  .page-contact__row input[type=email],
+  .page-contact__row input[type=tel],
+  .page-contact__row input[type=file] {
+    padding: 8px;
+  }
+}
+.page-contact__row label {
+  display: block;
+  margin: 0 0 4px;
+}
+.page-contact__row textarea {
+  width: 100%;
+  min-height: 240px;
+  padding: 16px;
+  border: 1px solid #ddd;
+  background: #fff;
+  resize: vertical;
+  line-height: 1.8;
+}
+@media (max-width: 600px) {
+  .page-contact__row textarea {
+    min-height: 200px;
+    padding: 8px;
+  }
+}
+.page-contact__required, .page-contact__optional {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 8px;
+  color: #fff;
+  line-height: 1;
+  font-size: 12px;
+}
+.page-contact__required {
+  background: #e60012;
+}
+.page-contact__optional {
+  background: #0075c2;
+}
+.page-contact__note {
+  margin: 0 0 12px;
+  line-height: 1.8;
+  font-size: 14px;
+}
+.page-contact__privacy {
+  font-size: 14px;
+}
+.page-contact__privacy a {
+  color: #39b54a;
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+  transition: opacity 0.3s;
+}
+@media (any-hover: hover) {
+  .page-contact__privacy a:hover {
+    opacity: 0.7;
+  }
+}
+.page-contact__check {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 12px 0 0;
+  cursor: pointer;
+}
+.page-contact__check input[type=checkbox] {
+  margin: 0;
+}
+.page-contact__submit {
+  margin: 80px 0 0;
+  text-align: center;
+}
+@media (max-width: 600px) {
+  .page-contact__submit {
+    margin: 60px 0 0;
+  }
+}
+.page-contact__submit-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 320px;
+  padding: 16px 40px;
+  border: none;
+  background: #39b54a;
+  color: #fff;
+  font-weight: 700;
+  line-height: 1;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+@media (any-hover: hover) {
+  .page-contact__submit-btn:hover {
+    opacity: 0.7;
+  }
+}
+@media (max-width: 600px) {
+  .page-contact__submit-btn {
+    width: 100%;
+    min-width: initial;
+  }
+}
+
 /* =================================
-
+ニュース
  ================================= */
+.page-news__content {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 80px 16px;
+}
+@media (max-width: 820px) {
+  .page-news__content {
+    padding: 40px 16px;
+  }
+}
+.page-news__card-wrap {
+  margin: 0 0 80px;
+}
+@media (max-width: 820px) {
+  .page-news__card-wrap {
+    margin: 0 0 40px;
+  }
+}
 /* サイト全体スタイルシート */
 /* =========================
    base（全ページ共通）
@@ -604,16 +955,18 @@ table {
    パンくずリスト
 ========================= */
 .breadcrumbs-wrap {
-  background-color: #ecf9ef;
-}
-.breadcrumbs-wrap--white {
-  background-color: #fff;
+  background-color: #f2f9fb;
 }
 .breadcrumbs-wrap__content {
-  max-width: 1240px;
-  margin: 0 auto;
-  padding: 12px 12px 0;
+  padding: 6px 12px 0;
   font-size: 11px;
+}
+
+/* =========================
+   ページャー
+========================= */
+.pager-wrap {
+  text-align: center;
 }
 
 /* =================================
@@ -1326,6 +1679,39 @@ a[class*=btn]:hover {
   transition: 0.25s ease;
 }
 
+.news-card__archive {
+  display: flex;
+  gap: 60px 24px;
+  flex-wrap: wrap;
+}
+@media (max-width: 820px) {
+  .news-card__archive {
+    gap: 40px 24px;
+  }
+}
+@media (max-width: 600px) {
+  .news-card__archive {
+    gap: 24px 24px;
+  }
+}
+.news-card__archive-item {
+  width: calc((100% - 72px) / 4);
+}
+@media (max-width: 1120px) {
+  .news-card__archive-item {
+    width: calc((100% - 48px) / 3);
+  }
+}
+@media (max-width: 820px) {
+  .news-card__archive-item {
+    width: calc((100% - 24px) / 2);
+  }
+}
+@media (max-width: 600px) {
+  .news-card__archive-item {
+    width: 100%;
+  }
+}
 .news-card__slider {
   max-width: 1200px;
   margin: 0 auto;
@@ -1346,15 +1732,18 @@ a[class*=btn]:hover {
   }
 }
 .news-card__item {
-  display: block;
+  display: flex;
+  flex-direction: column;
   overflow: hidden;
+  height: 100%;
+  margin: 0 8px;
   border-radius: 14px;
   background: #fff;
-  margin: 0 8px;
 }
 .news-card__img {
-  aspect-ratio: 4/3;
   overflow: hidden;
+  aspect-ratio: 4/3;
+  border-radius: 12px;
 }
 .news-card__img img {
   width: 100%;
@@ -1363,18 +1752,21 @@ a[class*=btn]:hover {
      object-fit: cover;
 }
 .news-card__body {
-  margin-top: -76px;
   position: relative;
-  padding: 8px 24px 8px;
-  background: rgba(255, 255, 255, 0.9);
+  z-index: 1;
+  margin-top: -80px;
+  padding: 4px 24px 32px;
+  background: rgba(255, 255, 255, 0.92);
 }
 .news-card__date {
   display: block;
-  font-size: 14px;
   color: #a8a8a8;
+  font-size: 13px;
 }
 .news-card__ttl {
-  line-height: 1.4;
+  line-height: 1.5;
+  word-break: break-word;
+  font-size: 14px;
 }
 .news-card .slick-arrow {
   width: 32px;

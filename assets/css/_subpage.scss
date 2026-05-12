@@ -9,11 +9,66 @@
 
 .subpage {
 
-  &__ {}
+  &__ttl-bg {
+    background-color: $bg;
+    padding: 40px 0;
 
-  &__ {}
+    @include tab {
+      padding: 12px 0;
+    }
+  }
 
-  &__ {}
+  &__ttl-inner {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 0 16px;
+  }
+
+
+  &__en {
+
+    color: #c8c8c8;
+    font-weight: 500;
+    line-height: 1;
+    font-size: 22px;
+
+    span {
+      color: #47c45a;
+    }
+
+    @include tab {
+      font-size: 15px;
+    }
+  }
+
+  &__ttl {
+    position: relative;
+    display: inline-block;
+    color: #47c45a;
+    font-weight: 500;
+    line-height: 1.2;
+    font-size: 34px;
+    margin: 8px 0 0;
+    padding: 8px 0 0;
+
+    @include tab {
+      font-size: 22px;
+      margin: 4px 0 0;
+      padding: 4px 0 0;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      max-width: 320px;
+      height: 1px;
+      background: #47c45a;
+    }
+  }
+
 
   &__ {}
 
@@ -32,100 +87,355 @@
 }
 
 /* =================================
-
+募集要項
  ================================= */
 
-.aaa {
+.page-guidelines {
 
-  &__ {}
+  &__content {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 80px 16px;
 
-  &__ {}
+    @include tab {
+      padding: 40px 16px;
+    }
+  }
 
-  &__ {}
+  &__schedule {
+    margin: 0 0 80px;
 
-  &__ {}
+    span {
+      color: #f08c3a;
+      font-size: 12px;
+      vertical-align: super;
+    }
 
-  &__ {}
+    @include tab {
+      margin: 0 0 60px;
+    }
+  }
 
-  &__ {}
 
-  &__ {}
 
-  &__ {}
+  &__row {
+    display: flex;
+    align-items: flex-start;
 
-  &__ {}
+    dt {
+      flex-shrink: 0;
+    }
 
-  &__ {}
+    dd {
+      flex: 1;
+      margin: 0;
+    }
 
-  &__ {}
+    span {
+      vertical-align: super;
+      font-size: 0.7em;
+      color: #f08c3a;
+    }
+  }
 
-  &__ {}
 
-  &__ {}
+  &__note {
+    margin: 20px 0 0;
 
-  &__ {}
+    p {
+      color: #f08c3a;
+      font-size: 12px;
+    }
+  }
 
-  &__ {}
+  &__note-box {
+    border: 1px solid #f08c3a;
+    padding: 4px 8px;
+    color: #f08c3a;
+    line-height: 1.5;
+    display: inline-block;
+  }
 
-  &__ {}
+  &__block {
+    margin: 0 0 60px;
 
-  &__ {}
+    @include sp {
+      margin: 0 0 40px;
+    }
+  }
 
+  &__heading {
+    color: #47c45a;
+    font-weight: 500;
+    margin: 0 0 4px;
+  }
+
+  &__sub-heading {
+    color: #f08c3a;
+    font-weight: 500;
+    line-height: 1.5;
+  }
+
+  &__example {
+    margin: 24px 0 0;
+
+    h4 {
+      color: #f08c3a;
+      font-weight: 500;
+    }
+
+  }
+
+  &__list {
+    padding-left: 1.5em;
+
+    li {
+      list-style: disc;
+    }
+  }
+}
+
+/* =================================
+お問い合わせ
+ ================================= */
+
+.page-contact {
+  &__content {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 80px 16px;
+
+    @include tab {
+      padding: 40px 16px;
+    }
+  }
+
+
+  &__section {
+    margin: 0 0 72px;
+
+    @include tab {
+      margin: 0 0 40px;
+    }
+  }
+
+  &__section-title {
+    position: relative;
+    margin: 0 0 16px;
+    padding-left: 12px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0.45em;
+      left: 0;
+      width: 4px;
+      height: 1em;
+      background: #39c45a;
+    }
+  }
+
+  &__guide-text {
+    margin: 0 0 60px;
+
+    @include tab{
+    margin: 0 0 40px;
+    }
+
+    a {
+      color: #39c45a;
+      text-decoration: underline;
+    }
+  }
+
+  &__list {
+    margin: 0;
+  }
+
+  &__row {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: 40px;
+    padding: 12px 0;
+    border-top: 1px solid #e5e5e5;
+
+    &:last-child {
+      border-bottom: 1px solid #e5e5e5;
+    }
+
+    @include tab {
+      grid-template-columns: 1fr;
+      gap: 4px;
+    }
+
+    dt {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin: 0;
+
+      @include tab {
+        justify-content: flex-start;
+      }
+    }
+
+    dd {
+      margin: 0;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="file"] {
+      width: 100%;
+      padding: 12px 16px;
+      border: 1px solid #ddd;
+      background: #fff;
+
+      @include tab {
+        padding: 8px;
+      }
+    }
+
+    label {
+      display: block;
+      margin: 0 0 4px;
+    }
+
+    textarea {
+      width: 100%;
+      min-height: 240px;
+      padding: 16px;
+      border: 1px solid #ddd;
+      background: #fff;
+      resize: vertical;
+      line-height: 1.8;
+
+      @include sp {
+        min-height: 200px;
+        padding: 8px;
+
+      }
+    }
+  }
+
+  &__required,
+  &__optional {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px 8px;
+    color: #fff;
+    line-height: 1;
+    font-size: 12px;
+  }
+
+  &__required {
+    background: #e60012;
+  }
+
+  &__optional {
+    background: #0075c2;
+  }
+
+  &__note {
+    margin: 0 0 12px;
+    line-height: 1.8;
+    font-size: 14px;
+  }
+
+  &__privacy {
+    font-size: 14px;
+
+    a {
+      color: $main;
+      text-decoration: underline;
+      text-underline-offset: 0.15em;
+      transition: opacity 0.3s;
+
+      @media (any-hover: hover) {
+
+        &:hover {
+          opacity: 0.7;
+        }
+      }
+    }
+  }
+
+  &__check {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 12px 0 0;
+    cursor: pointer;
+
+    input[type="checkbox"] {
+      margin: 0;
+    }
+  }
+
+
+  &__submit {
+    margin: 80px 0 0;
+    text-align: center;
+
+    @include sp {
+      margin: 60px 0 0;
+    }
+  }
+
+  &__submit-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 320px;
+    padding: 16px 40px;
+    border: none;
+    background: $main;
+    color: #fff;
+    font-weight: 700;
+    line-height: 1;
+    cursor: pointer;
+    transition: opacity 0.3s;
+
+    @media (any-hover: hover) {
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+
+    @include sp {
+      width: 100%;
+      min-width: initial;
+    }
+  }
 
 }
 
 /* =================================
-
+ニュース
  ================================= */
 
-.aaa {
+.page-news {
 
-  &__ {}
+    &__content {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 80px 16px;
 
-  &__ {}
+    @include tab {
+      padding: 40px 16px;
+    }
+  }
 
-  &__ {}
+  &__card-wrap {
+    margin: 0 0 80px;
 
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-
-}
-
-/* =================================
-
- ================================= */
-
-.aaa {
-
-  &__ {}
-
-  &__ {}
+    @include tab{
+    margin: 0 0 40px;
+    }
+  }
 
   &__ {}
 

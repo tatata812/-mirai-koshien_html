@@ -194,7 +194,7 @@
  ================================= */
 
 .top-project {
-  background-color: #f2f9fb;
+  background-color: $bg;
   padding: 100px 16px;
 
   @include tab {
@@ -453,7 +453,7 @@
 
 .top-supporter {
 
-  background-color: #f2f9fb;
+  background-color: $bg;
   padding: 100px 16px;
 
   @include tab {
