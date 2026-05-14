@@ -550,8 +550,8 @@
     font-size: 28px;
     font-weight: 500;
 
-    @include tab{
-    font-size: 20px;
+    @include tab {
+      font-size: 20px;
     }
   }
 
@@ -561,8 +561,8 @@
     display: block;
     margin: 0 0 40px;
 
-    @include tab{
-    margin: 0 0 12px;
+    @include tab {
+      margin: 0 0 12px;
     }
   }
 
@@ -796,7 +796,7 @@
 
 .page-ambassador {
 
-    background:
+  background:
     url('../img/top/how-bg-left.png') left 0 top 0 / 180px auto repeat-y,
     url('../img/top/how-bg-right.png') right 0 top 0 / 180px auto repeat-y;
 
@@ -817,10 +817,12 @@
     margin: 0 auto;
     padding: 80px 16px;
   }
+
   &__list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 56px 36px;
+    margin: 0 0 80px;
 
     @include pc {
       grid-template-columns: repeat(2, 1fr);
@@ -830,6 +832,8 @@
     @include tab {
       grid-template-columns: 1fr;
       gap: 24px;
+      margin: 0 0 40px;
+
     }
   }
 
@@ -841,7 +845,7 @@
   }
 
   &__head {
-position: relative;
+    position: relative;
   }
 
   &__thumbnail {
@@ -868,14 +872,14 @@ position: relative;
     color: #008c4a;
     font-weight: 500;
     line-height: 1.5;
-        background: #daf4c8;
-        padding: 8px 8px 8px 120px;
+    background: #daf4c8;
+    padding: 8px 8px 8px 120px;
 
   }
 
   &__profile {
-        background: #eef4c8;
-        padding: 8px 8px 8px 120px;
+    background: #eef4c8;
+    padding: 8px 8px 8px 120px;
   }
 
   &__course,

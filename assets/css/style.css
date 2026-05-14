@@ -1215,6 +1215,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 56px 36px;
+  margin: 0 0 80px;
 }
 @media (max-width: 1120px) {
   .page-ambassador__list {
@@ -1226,6 +1227,7 @@
   .page-ambassador__list {
     grid-template-columns: 1fr;
     gap: 24px;
+    margin: 0 0 40px;
   }
 }
 .page-ambassador__item {
