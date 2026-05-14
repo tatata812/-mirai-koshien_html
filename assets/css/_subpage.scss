@@ -29,7 +29,7 @@
   }
 
   &__ttl-inner {
-    max-width: 980px;
+    max-width: 880px;
     margin: 0 auto;
     padding: 0 16px;
   }
@@ -415,85 +415,175 @@
  ================================= */
 
 .page-news {
-
-  &__card-wrap {
-    margin: 0 0 80px;
+  &__list {
+    border-top: 1px solid #e5e5e5;
+    max-width: 780px;
+    margin: 0 auto 80px;
 
     @include tab {
-      margin: 0 0 40px;
+      margin: 0 auto 40px;
     }
   }
 
-
-  &__ttl-wrap {
-    max-width: 980px;
-    margin: 0 auto;
-    padding: 0 16px;
+  &__item {
+    border-bottom: 1px solid #e5e5e5;
   }
 
-  &__ttl {
+  &__link {
     position: relative;
-    margin: 0 0 16px;
-    font-weight: 500;
-    font-size: 28px;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    padding: 16px 80px 16px 0;
+    color: inherit;
+    text-decoration: none;
 
-    &::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: -8px;
-      width: 80px;
-      height: 3px;
-      background: $main;
+    @include tab {
+      gap: 24px;
+      padding: 24px 60px 24px 0;
     }
 
     @include sp {
-      line-height: 1.4;
-      font-size: 20px;
+      align-items: flex-start;
+      gap: 16px;
+      padding: 20px 44px 20px 0;
     }
   }
 
-  &__time {
-    display: block;
-    color: #999;
-    text-align: right;
-    font-size: 12px;
-    padding: 0 8px;
+  &__img {
+    width: 200px;
+    flex-shrink: 0;
+    border-radius: 16px;
+    overflow: hidden;
 
+    @include tab {
+      width: 240px;
+    }
+
+    @include sp {
+      width: 110px;
+      border-radius: 10px;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 320 / 240;
+      object-fit: cover;
+    }
   }
 
+  &__body {
+    flex: 1;
+  }
 
-  &__single-content {}
+  &__date {
+    color: #8a8a8a;
+    font-size: 14px;
+  }
 
-  &__ {}
+  &__ttl {
+    margin: 0 0 12px;
+    color: #47c45a;
+    font-weight: 500;
+    line-height: 1.5;
+    font-size: 17px;
+  }
 
-  &__ {}
+  &__text {
+    margin: 0;
+    line-height: 1.9;
 
-  &__ {}
+    @include sp {
+      display: -webkit-box;
+      overflow: hidden;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 3;
+    }
+  }
 
-  &__ {}
+  &__arrow {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    border: 2px solid #47c45a;
+    border-radius: 50%;
+    transform: translateY(-50%);
 
-  &__ {}
+    @include sp {
+      width: 34px;
+      height: 34px;
+      border-width: 2px;
+    }
 
-  &__ {}
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 13px;
+      height: 13px;
+      border-top: 4px solid #47c45a;
+      border-right: 4px solid #47c45a;
+      transform: translate(-65%, -50%) rotate(45deg);
 
-  &__ {}
+      @include sp {
+        width: 8px;
+        height: 8px;
+        border-width: 3px;
+      }
+    }
+  }
+}
 
-  &__ {}
+.single {
 
-  &__ {}
+  &__content {
+    max-width: 780px;
+    margin: 0 auto;
+  }
 
-  &__ {}
+  &__ttl {
+    color: #2a6433;
+    font-size: 28px;
+    font-weight: 500;
 
-  &__ {}
+    @include tab{
+    font-size: 20px;
+    }
+  }
 
-  &__ {}
+  &__date {
+    font-size: 14px;
+    color: #c8c8c8;
+    display: block;
+    margin: 0 0 40px;
 
-  &__ {}
+    @include tab{
+    margin: 0 0 12px;
+    }
+  }
 
-  &__ {}
+  &__thumbnail {
+    width: 100%;
+    margin: 0 0 40px;
+    flex-shrink: 0;
+    border-radius: 16px;
+    overflow: hidden;
 
+    @include sp {
+      border-radius: 10px;
+    }
 
+    img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 320 / 240;
+      object-fit: cover;
+    }
+  }
 }
 
 /* =================================
@@ -667,8 +757,8 @@
     background-color: #efefef;
     padding: 80px 16px;
 
-    @include tab{
-    padding: 32px 16px;
+    @include tab {
+      padding: 32px 16px;
     }
   }
 
@@ -680,7 +770,7 @@
     border-radius: 24px;
 
     @include tab {
-    padding: 24px 16px;
+      padding: 24px 16px;
 
     }
   }
@@ -701,46 +791,110 @@
 }
 
 /* =================================
-
+各校のアンバサダー
  ================================= */
 
-.aaa {
+.page-ambassador {
 
-  &__ {}
+    background:
+    url('../img/top/how-bg-left.png') left 0 top 0 / 180px auto repeat-y,
+    url('../img/top/how-bg-right.png') right 0 top 0 / 180px auto repeat-y;
 
-  &__ {}
+  @include tab {
+    background:
+      url('../img/top/how-bg-left.png') left 0 top 0 / 100px auto repeat-y,
+      url('../img/top/how-bg-right.png') right 0 top 0 / 100px auto repeat-y;
+  }
 
-  &__ {}
+  @include sp {
+    background:
+      url('../img/top/how-bg-left.png') left 0 top 0 / 50px auto repeat-y,
+      url('../img/top/how-bg-right.png') right 0 top 0 / 50px auto repeat-y;
+  }
 
-  &__ {}
+  &__content {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 80px 16px;
+  }
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 56px 36px;
 
-  &__ {}
+    @include pc {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 32px 24px;
+    }
 
-  &__ {}
+    @include tab {
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+  }
 
-  &__ {}
+  &__item {
+    overflow: hidden;
+    border-radius: 24px;
+    background: #fff;
+    box-shadow: 0 4px 20px rgba(#000, 0.08);
+  }
 
-  &__ {}
+  &__head {
+position: relative;
+  }
 
-  &__ {}
+  &__thumbnail {
+    position: absolute;
+    top: 45%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 95px;
+    flex-shrink: 0;
+    margin: 10px 0 0 10px;
 
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
+    img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 2px solid #fff;
+    }
+  }
 
 
+  &__school {
+    color: #008c4a;
+    font-weight: 500;
+    line-height: 1.5;
+        background: #daf4c8;
+        padding: 8px 8px 8px 120px;
+
+  }
+
+  &__profile {
+        background: #eef4c8;
+        padding: 8px 8px 8px 120px;
+  }
+
+  &__course,
+  &__name {
+    color: #f08c3a;
+    font-weight: 500;
+    line-height: 1.6;
+  }
+
+  &__body {
+    padding: 20px;
+
+    p {
+      line-height: 1.2;
+      font-size: 14px;
+      color: #8a8a8a;
+      font-weight: 200;
+    }
+  }
 }
 
 /* =================================
