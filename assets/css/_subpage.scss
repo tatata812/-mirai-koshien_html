@@ -436,7 +436,7 @@
     margin: 0 0 16px;
     font-weight: 500;
     font-size: 28px;
-    
+
     &::after {
       content: "";
       position: absolute;
@@ -446,10 +446,10 @@
       height: 3px;
       background: $main;
     }
-    
+
     @include sp {
       line-height: 1.4;
-    font-size: 20px;
+      font-size: 20px;
     }
   }
 
@@ -464,6 +464,382 @@
 
 
   &__single-content {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+
+}
+
+/* =================================
+じもと米
+ ================================= */
+
+.page-jimotomai {
+  &__block {
+    max-width: 780px;
+    margin: 0 auto 60px;
+
+    @include sp {
+      margin: 0 0 40px;
+    }
+  }
+
+  &__heading {
+    color: #2a6433;
+    font-weight: 500;
+    margin: 0 0 32px;
+    font-size: 26px;
+
+    span {
+      font-size: 18px;
+    }
+
+    @include tab {
+      margin: 0 0 24px;
+      font-size: 22px;
+      line-height: 1.2;
+
+      span {
+        font-size: 15px;
+      }
+    }
+  }
+
+  &__sub-heading {
+    color: #47c45a;
+    font-weight: 500;
+    margin: 24px 0 8px;
+    font-size: 20px;
+
+    @include tab {
+      font-size: 17px;
+    }
+  }
+
+  &__mini-heading {
+    color: #f08c3a;
+    font-weight: 400;
+  }
+
+  &__intro {
+    display: flex;
+    gap: 40px;
+    margin: 0 0 100px;
+
+    @include sp {
+      display: block;
+      margin: 0 0 60px;
+
+    }
+  }
+
+  &__text {
+    flex: 1;
+  }
+
+  &__image {
+    width: 48%;
+    flex-shrink: 0;
+
+    @include sp {
+      width: 100%;
+      margin: 24px 0 0;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+
+  &__list {
+    padding-left: 1.5em;
+    margin: 12px 0;
+
+    li {
+      list-style: disc;
+
+      &::marker {
+        color: #f08c3a;
+      }
+    }
+  }
+
+  &__item {
+    margin: 0 0 36px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__detail {
+    margin: 0 0 18px;
+  }
+
+  &__row {
+    display: flex;
+    align-items: flex-start;
+
+    dt {
+      flex-shrink: 0;
+      font-weight: 500;
+
+      span {
+        color: #f08c3a;
+      }
+    }
+
+    dd {
+      flex: 1;
+      margin: 0;
+    }
+  }
+
+  &__photos {
+    display: flex;
+    gap: 20px;
+    margin: 20px auto 0;
+    max-width: 640px;
+
+    @include sp {
+      display: block;
+    }
+
+    figure {
+      flex: 1;
+      margin: 0;
+
+      @include sp {
+        margin: 0 0 16px;
+      }
+    }
+
+    img {
+      display: block;
+      width: 100%;
+    }
+
+    figcaption {
+      margin: 6px 0 0;
+      font-size: 12px;
+      line-height: 1.5;
+    }
+
+    &--three {
+      figure {
+        width: calc((100% - 40px) / 3);
+
+        @include sp {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  &__contact {
+    background-color: #efefef;
+    padding: 80px 16px;
+
+    @include tab{
+    padding: 32px 16px;
+    }
+  }
+
+  &__contact-inner {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 40px 80px;
+    background: #fff;
+    border-radius: 24px;
+
+    @include tab {
+    padding: 24px 16px;
+
+    }
+  }
+
+
+  &__company {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 60px 16px;
+  }
+
+  &__company-link {
+    display: block;
+    max-width: 520px;
+    margin: 24px auto 0;
+  }
+
+}
+
+/* =================================
+
+ ================================= */
+
+.aaa {
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+
+}
+
+/* =================================
+
+ ================================= */
+
+.aaa {
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+
+}
+
+/* =================================
+
+ ================================= */
+
+.aaa {
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+
+}
+
+/* =================================
+
+ ================================= */
+
+.aaa {
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
 
   &__ {}
 
