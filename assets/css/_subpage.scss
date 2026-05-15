@@ -916,46 +916,107 @@
 }
 
 /* =================================
-
+企業協賛・後援一覧
  ================================= */
 
-.aaa {
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
+.page-supporters {
 
 
+  &__group {
+    margin: 0 0 120px;
+
+    @include sp {
+      margin: 0 0 80px;
+    }
+  }
+
+  &__heading {
+
+    display: flex;
+    align-items: baseline;
+    margin: 0 0 40px;
+    padding: 0 0 8px;
+    border-bottom: 1px solid #dcdcdc;
+    color: $main;
+    font-weight: 500;
+    color: #008c4a;
+    font-size: 26px;
+    line-height: 1;
+
+    span {
+      font-size: 12px;
+      color: #888;
+      font-weight: 200;
+    }
+
+    @include sp {
+      font-size: 20px;
+      margin: 0 0 24px;
+
+
+    }
+
+  }
+
+  &__list {
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px 24px;
+
+    @include sp {
+      gap: 40px 12px;
+    }
+  }
+
+  &__item {
+
+    width: calc((100% - 96px) / 5);
+
+    @include tab {
+
+      width: calc((100% - 48px) / 3);
+    }
+
+    @include sp {
+      width: calc((100% - 12px) / 2);
+    }
+
+    a {
+      display: block;
+    }
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    aspect-ratio: 222 / 74;
+    padding: 2px;
+    border: 1px solid #e5e5e5;
+    background: #fff;
+    overflow: hidden;
+
+    img {
+      display: block;
+      max-width: 100%;
+      max-height: 100%;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+    }
+  }
+
+  &__name {
+    font-size: 11px;
+    margin: 0 0 6px;
+  }
+
+  &__support {
+    font-size: 14px;
+    margin: 0 auto;
+    max-width: 780px;
+  }
 }
 
 /* =================================

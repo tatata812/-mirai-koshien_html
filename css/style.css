@@ -1294,8 +1294,94 @@
 }
 
 /* =================================
-
+企業協賛・後援一覧
  ================================= */
+.page-supporters__group {
+  margin: 0 0 120px;
+}
+@media (max-width: 600px) {
+  .page-supporters__group {
+    margin: 0 0 80px;
+  }
+}
+.page-supporters__heading {
+  display: flex;
+  align-items: baseline;
+  margin: 0 0 40px;
+  padding: 0 0 8px;
+  border-bottom: 1px solid #dcdcdc;
+  color: #39b54a;
+  font-weight: 500;
+  color: #008c4a;
+  font-size: 26px;
+  line-height: 1;
+}
+.page-supporters__heading span {
+  font-size: 12px;
+  color: #888;
+  font-weight: 200;
+}
+@media (max-width: 600px) {
+  .page-supporters__heading {
+    font-size: 20px;
+    margin: 0 0 24px;
+  }
+}
+.page-supporters__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px 24px;
+}
+@media (max-width: 600px) {
+  .page-supporters__list {
+    gap: 40px 12px;
+  }
+}
+.page-supporters__item {
+  width: calc((100% - 96px) / 5);
+}
+@media (max-width: 820px) {
+  .page-supporters__item {
+    width: calc((100% - 48px) / 3);
+  }
+}
+@media (max-width: 600px) {
+  .page-supporters__item {
+    width: calc((100% - 12px) / 2);
+  }
+}
+.page-supporters__item a {
+  display: block;
+}
+.page-supporters__logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 222/74;
+  padding: 2px;
+  border: 1px solid #e5e5e5;
+  background: #fff;
+  overflow: hidden;
+}
+.page-supporters__logo img {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.page-supporters__name {
+  font-size: 11px;
+  margin: 0 0 6px;
+}
+.page-supporters__support {
+  font-size: 14px;
+  margin: 0 auto;
+  max-width: 780px;
+}
+
 /* =================================
 
  ================================= */
