@@ -652,6 +652,16 @@
 .page-guidelines__list li {
   list-style: disc;
 }
+.page-guidelines__list-icon a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0px;
+}
+.page-guidelines__list-icon a img {
+  width: 32px;
+  height: auto;
+  flex-shrink: 0;
+}
 .page-guidelines__btn {
   display: block;
   max-width: 500px;

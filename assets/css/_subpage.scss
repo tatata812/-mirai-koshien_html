@@ -195,6 +195,20 @@
     }
   }
 
+  &__list-icon {
+    a {
+      display: inline-flex;
+      align-items: center;
+      gap: 0px;
+
+      img {
+        width: 32px;
+        height: auto;
+        flex-shrink: 0;
+      }
+    }
+  }
+
   &__btn {
     display: block;
     max-width: 500px;
